@@ -51,33 +51,3 @@
       float: none;
     }
   }
-
-/* Style the body */
-
-body {
-    background-image: url("annie-spratt-pKpipZVVEC0-unsplash.jpg")
-}
-
-h1 { margin-right: 500px; margin-left: 500px; padding-bottom: 1em}
-h1 { letter-spacing: 1px}
-p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; padding-right: 3em; }
-
-
-/* Style the buttons */
-.button {
-    background-color: #56e0ff; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    border-radius: 8px
-  }
-
-  .button:hover {
-    background-color: #ddd; /* Green */
-    color: black;
-  }
