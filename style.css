@@ -1,6 +1,6 @@
 /* Style the header with a grey background and some padding */
 .header {
-    padding: 20px 240px;
+    padding: 20px 20px;
   }
   
   /* Style the header links */
@@ -53,12 +53,16 @@
 /* Style the body */
 
 body {
-    background-image: url("annie-spratt-pKpipZVVEC0-unsplash.jpg")
+    background-image: url("bg.png")
 }
 
-h1 { margin-right: 500px; margin-left: 500px; padding-bottom: 1em}
+h1 { margin-right: 500px; margin-left: 500px; padding-bottom: 1em; color:beige}
 h1 { letter-spacing: 1px}
-p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; padding-right: 3em; }
+h1 { font-family: 'Alien', sans-serif; }
+h2 { padding-bottom: 1em; color:beige}
+h2 { font-family: 'Alien', sans-serif; }
+p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; padding-right: 3em; color:beige}
+p {font-family: 'Alien', sans-serif;}
 
 
 /* Style the buttons */
@@ -75,24 +79,57 @@ p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; 
     border-radius: 8px
   }
 
-  .button:hover {
-    background-color: #ddd; /* Green */
-    color: black;
-  }
+  button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Alien', sans-serif;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
 
 /* Dropdown Button */
-.dropbtn {
-  background-color: #56e0ff; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    border-radius: 8px
-}
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -104,15 +141,16 @@ p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  font-family: 'Alien', sans-serif
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -127,3 +165,24 @@ p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #ddd; /* Green */
   color: black;}
+
+
+  /* Style graphics sections */
+.section .graphic {
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.span {
+  display: inline-block; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+#container { overflow: hidden; }
+#floated-imgs { float: left; }
+#floated-imgs img {display: block; }
