@@ -61,8 +61,11 @@ h1 { letter-spacing: 1px}
 h1 { font-family: 'Alien', sans-serif; }
 h2 { padding-bottom: 1em; color:beige}
 h2 { font-family: 'Alien', sans-serif; }
+h3 { font-family: 'Alien', sans-serif; }
+li { font-family: 'Alien', sans-serif; }
 p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; padding-right: 3em; color:beige}
 p {font-family: 'Alien', sans-serif;}
+
 
 
 /* Style the buttons */
@@ -186,3 +189,28 @@ p {font-family: 'Alien', sans-serif;}
 #container { overflow: hidden; }
 #floated-imgs { float: left; }
 #floated-imgs img {display: block; }
+
+ul {
+  list-style-image: url(
+    "solar.gif");
+    list-style-type: lower-greek;
+            }
+a {
+   text-decoration: none;
+}
+a:link, a:visited {
+  font-size: 25px;
+
+  color: blue;
+  text-decoration: none;
+   --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    color: var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    padding-bottom: 25px;
+  }
+a:hover {
+  color: white;
+  background-color: var(--glow-color);
+}
