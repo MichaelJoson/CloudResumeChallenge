@@ -63,7 +63,7 @@ h2 { padding-bottom: 1em; color:beige}
 h2 { font-family: 'Alien', sans-serif; }
 h3 { font-family: 'Alien', sans-serif; }
 li { font-family: 'Alien', sans-serif; }
-p {margin-right: 400px; margin-left: 460px; font-size: 150%; line-height: 36px; padding-right: 3em; color:beige}
+p {font-size: 150%; line-height: 36px; color:beige; position: relative;}
 p {font-family: 'Alien', sans-serif;}
 
 
@@ -213,4 +213,12 @@ a:link, a:visited {
 a:hover {
   color: white;
   background-color: var(--glow-color);
+}
+
+.website-counter {
+  font-family: 'Alien', sans-serif;
+  color: beige;
+  font-size: 150%;
+  position: relative;
+
 }
