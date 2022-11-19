@@ -9,7 +9,7 @@ this isn't just any random portfolio. Throughout the course of this challenge I'
 - [ ] Static Website
 - [ ] HTTPS
 - [ ] DNS
-- [ ] JavaScript
+- [x] JavaScript
 - [ ] Database
 - [ ] API
 - [ ] Python
